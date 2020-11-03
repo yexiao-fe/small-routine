@@ -1,0 +1,21 @@
+<view class="wrapper">
+  <view class="canvas">
+    <canvas style="width: 600px; height: 554px;" canvas-id="myCanvas"></canvas>
+  </view>
+  <view class="container">
+    <view wx:for="{{poem}}" class="poem" style="--n:{{index*3}}s" wx:key="index">
+      <span wx:for="{{item}}" wx:key="index">{{item}}</span>
+    </view>
+  </view>
+  <view class="message">
+    <view class="time">
+      <view>我们相识</view>
+      <view>{{day}}天{{hour}}时{{min}}分{{second}}秒</view>
+    </view>
+    <view class="username">
+      新一
+      <span>♥</span>
+      小兰
+    </view>
+  </view>
+</view>

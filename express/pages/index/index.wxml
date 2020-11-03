@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container mapContainer">
+  <map show-location="true" longitude="{{longitude}}" latitude="{{latitude}}" polyline="{{polyline}}" markers="{{markers}}" scale="14" 
+  bindmarkertap="bindmarkertap" subkey="AHQBZ-RFJ3O-RKFWX-SXNZD-GVKOS-PNFQZ"></map>
+</view>

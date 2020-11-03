@@ -1,0 +1,114 @@
+.wrapper{
+  position: relative;
+  height: 100%;
+  background-color: #000;
+}
+.canvas{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 40rpx;
+  left: -30rpx;
+  z-index: 1;
+  opacity: 0.1;
+  animation: _first2 8s linear 26s infinite;
+}
+.container{
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10rpx;
+  justify-content: space-around;
+  position: relative;
+  z-index:10;
+  height: 65%;
+}
+
+.poem{
+  width: 40rpx;
+  height: 0%;
+  --n:0s;
+  animation: _height 2s linear var(--n) forwards;
+  overflow: hidden;
+  line-height: 40px;
+  color: #efabf9;
+}
+
+/* 第一行 */
+.poem span:nth-child(1){
+  color: #fe0000;
+  opacity: 0;
+  animation: _first 1s linear 24s forwards;
+}
+
+/* 心形 */
+.poem:nth-child(1) span:nth-child(2),
+.poem:nth-child(1) span:nth-child(5),
+.poem:nth-child(1) span:nth-child(6),
+.poem:nth-child(1) span:nth-child(7),
+.poem:nth-child(1) span:nth-child(8),
+.poem:nth-child(2) span:nth-child(7),
+.poem:nth-child(2) span:nth-child(8),
+.poem:nth-child(3) span:nth-child(2),
+.poem:nth-child(3) span:nth-child(8),
+.poem:nth-child(4) span:nth-child(2),
+.poem:nth-child(4) span:nth-child(3),
+.poem:nth-child(8) span:nth-child(2),
+.poem:nth-child(8) span:nth-child(5),
+.poem:nth-child(8) span:nth-child(6),
+.poem:nth-child(8) span:nth-child(7),
+.poem:nth-child(8) span:nth-child(8),
+.poem:nth-child(7) span:nth-child(7),
+.poem:nth-child(7) span:nth-child(8),
+.poem:nth-child(6) span:nth-child(2),
+.poem:nth-child(6) span:nth-child(8),
+.poem:nth-child(5) span:nth-child(2),
+.poem:nth-child(5) span:nth-child(3){
+  color: rgba(255,255,255,.8);
+}
+
+@keyframes _height{
+  0%{
+    height: 0%;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
+@keyframes _first{
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes _first2{
+  50%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 0.1;
+  }
+}
+
+.message{
+  height: 35%;
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+.time{
+  line-height: 100rpx;
+  padding-top: 110rpx;
+  color: yellow;
+  text-shadow: 2px 2px 5px #fff;
+}
+
+.username{
+  color: cyan;
+}
+
+.username span{
+  color: #fe0000;
+}
+
+
